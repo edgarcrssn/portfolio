@@ -1,0 +1,295 @@
+// ! General
+*{
+    color: $secondary-color;
+}
+html{
+    scroll-behavior: smooth
+}
+body{
+    font-family: hero-new, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+
+    background-color: $background-color;
+
+    > section{
+        margin-bottom: $big-margin;
+
+        &:first-of-type{
+            margin-top: $big-margin;
+        }
+    }
+}
+
+h1, h2{
+    font-weight: 700;
+}
+h3, h4, h5, h6{
+    font-weight: 500;
+}
+a{
+    color: $secondary-color;
+}
+
+@media all and (min-width: 1024px){
+    .mobile{
+        display: none !important;
+    }
+}
+@media all and (max-width: 1023px){
+    .desktop{
+        display: none !important;
+    }
+}
+// ! General
+
+// ? Classes répétitives    
+.secondary-color-bg{
+    background-color: $secondary-color;
+
+    *{
+        color: $main-color;
+    }
+
+    div.section-title{
+        border-bottom: 1px solid rgba($main-color, .2);
+    }
+}
+
+.big-paragraph{
+    line-height: 2em;
+    text-align: justify;
+}
+.important-text{
+    font-size: 1.15em;
+}
+.tiny-text{
+    font-size: .85em;
+}
+// ? Classes répétitives
+
+// * Widgets
+.section-title{
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid rgba($secondary-color, .2);
+
+    h2{
+        font-size: 2em;
+    }
+    p{
+        @extend .tiny-text;
+        opacity: .6;
+        margin-top: 1em;
+    }
+}
+.important-message{
+    @extend .big-paragraph;
+    
+    border-radius: .5em;
+    padding: .5em 1em;
+
+    background-color: rgba(green, .1);
+    border: 1px solid rgba(green, .25);
+
+    position: relative;
+
+    span.emoji{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+
+        font-size: 1.5em;
+    }
+
+    &.site-de-vetements{
+        background-color: rgba($site-de-vetements, .1);
+        border: 1px solid rgba($site-de-vetements, .25);
+    }
+    &.trip-finder{
+        background-color: rgba($trip-finder, .1);
+        border: 1px solid rgba($trip-finder, .25);
+    }
+    &.my-creative-week{
+        background-color: rgba($my-creative-week, .1);
+        border: 1px solid rgba($my-creative-week, .25);
+    }
+    &.surf-coin{
+        background-color: rgba($surf-coin, .1);
+        border: 1px solid rgba($surf-coin, .25);
+    }
+    &.ce-portfolio{
+        background-color: rgba($ce-portfolio, .1);
+        border: 1px solid rgba($ce-portfolio, .25);
+    }
+}
+
+.icon{
+    @extend .tiny-text;
+    font-weight: 500;
+
+    padding: .3em 1em;
+    border-radius: 2em;
+
+    background-color: transparent;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+
+    &:not(:last-of-type){
+        margin-right: .5em;
+    }
+
+    &__filled{
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        color: $main-color-darker;
+    }
+
+    &__colored{
+
+        &__photoshop{
+            background-color: #001E38;
+            color: #00A9FF;
+        }
+        &__illustrator{
+            background-color: #390000;
+            color: #FF9500;
+        }
+        &__xd{
+            background-color: #4F0239;
+            color: #FF49FD;
+        }
+        &__indesign{
+            background-color: #50001F;
+            color: #FF0663;
+        }
+        
+        &__html{
+            background-color: #F64200;
+            color: $background-color;
+        }
+        &__css{
+            background-color: #0073BE;
+            color: $background-color;
+        }
+        &__sass{
+            background-color: #CD6799;
+            color: $background-color;
+        }
+        &__js{
+            background-color: #EFA000;
+            color: $background-color;
+        }
+        &__vue{
+            background-color: #40B984;
+            color: $background-color;
+        }
+        &__php{
+            background-color: #777AB7;
+            color: $background-color;
+        }
+    }
+
+    &__bigger{
+        padding: .5em 1.2em;
+    }
+}
+.button{
+    font-weight: 500;
+
+    padding: 1em 1.5em;
+    border-radius: .5em;
+
+    background-color: $secondary-color;
+    color: $main-color;
+
+    &__simple{
+        color: rgba($main-color, .9);
+        transition: .2s;
+
+        &:hover{
+            color: rgba($background-color, 1);
+        }
+    }
+    &__inverted{
+        color: $secondary-color;
+        background-color: rgba($main-color, .9);
+        transition: .2s;
+
+        &:hover{
+            background-color: rgba($main-color, 1);
+        }
+    }
+
+    &__tiny{
+        font-weight: 400;
+        padding: .5em 1.5em;
+    }
+
+    &__project-cta{
+        padding-right: 0;
+
+        &::before{
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+
+            margin-right: .75em;
+            transition: .2s;
+        }
+        &:hover::before{
+            margin-right: 1.25em;
+        }
+        &.view::before{
+            content: '\f06e';
+        }
+        &.download::before{
+            content: '\f56d';
+        }
+        &.know-more::before{
+            content: '\f518';
+        }
+        &.inactive{
+            pointer-events: none;
+            opacity: 0.2;
+        }
+        
+        &.site-de-vetements{
+            @include project-cta-button($site-de-vetements);
+        }
+        &.trip-finder{
+            @include project-cta-button($trip-finder);
+        }
+        &.my-creative-week{
+            @include project-cta-button($my-creative-week);
+        }
+        &.surf-coin{
+            @include project-cta-button($surf-coin);
+        }
+        &.ce-portfolio{
+            @include project-cta-button($ce-portfolio);
+        }
+    }
+}
+// * Widgets
+
+
+@media all and (min-width: 1920px){
+    body{
+        font-size: 12px * 1.3;
+    }
+}
+@media all and (max-width: 750px){
+    body{
+        font-size: 12px * .9;
+    }
+
+    .tiny-text{
+        font-size: 1em;
+    }
+
+    .icon{
+        font-size: .85em;
+    }
+}

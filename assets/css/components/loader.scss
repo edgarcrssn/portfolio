@@ -1,0 +1,107 @@
+$cube-size: 100px;
+$animation-speed: 1.8s;
+
+div#loader{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background-color: $background-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    opacity: 1;
+
+    &.hidden{
+        opacity: 0;
+        transition: .4s ease-out; // ! Ne pas raccourcir temps d'animation / Modifier aussi dans loader.js
+    }
+
+    .cube{
+        position: relative;
+        
+        width: $cube-size;
+        height: $cube-size;
+    
+        perspective: 1200px;
+        perspective-origin: 200% 200%;
+        
+        transform-style: preserve-3d;
+
+        animation: cubeRotation $animation-speed cubic-bezier(.68,-0.55,.27,1.55) infinite;
+
+        .face{
+            position: absolute;
+        
+            width: 100%;
+            height: 100%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            background-color: rgba($main-color, 0.8);
+            border: 1px solid rgba($secondary-color, 0.1);
+
+            > img{
+                width: 60%;
+                opacity: 0.8;
+            }
+
+            &.front{
+                transform: translateZ($cube-size / 2);
+            }
+            &.back{
+                transform: rotateY(180deg) translateZ($cube-size / 2);
+            }
+            &.right{
+                transform: rotateY(90deg) translateZ($cube-size / 2);
+            }
+            &.left{
+                transform: rotateY(-90deg) translateZ($cube-size / 2);
+            }
+            &.top{
+                transform: rotateX(90deg) translateZ($cube-size / 2);
+            }
+            &.bottom{
+                transform: rotateX(-90deg) translateZ($cube-size / 2);
+            }
+        }
+        
+    }
+
+    p{
+        font-size: 1.5em;
+        margin-top: 50px;
+        font-weight: 500;
+
+        animation: messageAnimation $animation-speed ease-in-out infinite;
+    }
+}
+
+@keyframes cubeRotation {
+    from{
+        transform: rotate3d(0);
+    }
+    to{
+        transform: rotate3d(1, 1, 0, 1turn);
+    }
+}
+
+@keyframes messageAnimation {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

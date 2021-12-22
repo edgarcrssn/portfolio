@@ -1,0 +1,227 @@
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 9;
+
+    width: 100vw;
+    height: 8vh;
+
+    background-color: rgba($background-color, .8);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+
+    transform: translateY(-100%);
+    transition: .2s ease-out;
+
+    &.active{
+        transform: translateY(0);
+    }
+    &.transparent{
+        background-color: transparent;
+        backdrop-filter: blur(0);
+    }
+
+    ul{
+        width: 100%;
+        margin: 0 $big-margin;
+        
+        .home-logo{
+
+            a{
+                display: flex;
+                align-items: center;
+            }
+
+            img{
+                width: 2em;
+                height: auto;
+            }
+        }
+
+
+
+        &.desktop{
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            align-items: center;
+
+            .sections{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .social-networks{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+    
+                font-size: 1.2em;
+    
+                li{
+                    margin-left: 1.5em;
+                }
+            }
+        }
+        &.mobile{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .menu{
+
+                button{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center !important;
+
+                    > div{
+                        height: 13px;
+                        width: 15px;
+                        margin: 0 .5em;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        > span{
+                            background-color: $secondary-color;
+                            width: 100%;
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div#hamburger.mobile{
+    position: fixed;
+    z-index: 99;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba($background-color, .8);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+
+    transform: translateX(100%);
+    transition: .2s ease-out;
+
+    &.active{
+        transform: translateX(0);
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 33%;
+        justify-content: space-between;
+
+        li{
+            // ! Variables
+            $num-items: 7;
+            $anim-dur: .5s;
+            $anim-delay: $anim-dur / $num-items;
+            // ! Variables
+
+            &.active{
+                animation: wave $anim-dur backwards;
+
+                @keyframes wave{
+                    from{
+                        transform: translateX(50vw);
+                        opacity: 0;
+                    }
+                    to{
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            }
+
+            @for $i from 1 through $num-items{
+                &:nth-child(#{$i}).active{
+                    animation-delay: $anim-delay * $i;
+                }
+            }
+
+            a{
+                line-height: 3.5em;
+                font-size: 1.25em;
+            }
+        }
+
+        .close{
+            margin-bottom: 1.5em;
+
+            button{
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center !important;
+
+                > div{
+                    height: 13px;
+                    width: 15px;
+                    margin: 0 .5em;
+
+                    position: relative;
+
+                    > span{
+                        background-color: $secondary-color;
+                        width: 100%;
+                        height: 1px;
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        &:nth-child(1){
+                            transform: translate(-50%, -50%) rotate(45deg);
+                        }
+                        &:nth-child(2){
+                            transform: translate(-50%, -50%) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+        .sections{
+            font-size: 1.5em;
+
+            text-align: center;
+        }
+        .social-networks{
+            font-size: 1.5em;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            li{
+                margin: 0 .75em;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 800px){
+    nav{
+        height: 6.5vh;
+    }
+}

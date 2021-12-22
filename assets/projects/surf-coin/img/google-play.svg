@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="311" height="63" viewBox="0 0 311 63">
+  <g id="Groupe_274" data-name="Groupe 274" transform="translate(-1011 -4012)">
+    <rect id="Rectangle_97" data-name="Rectangle 97" width="311" height="63" rx="8" transform="translate(1011 4012)" fill="#a973f5"/>
+    <g id="Groupe_272" data-name="Groupe 272" transform="translate(25.5)">
+      <text id="Google_Play" data-name="Google Play" transform="translate(1094 4052)" fill="#fff" font-size="26" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="0" y="0">Google Play</tspan></text>
+      <path id="google-play" d="M5.548.9,24.961,12.064,20.8,16.225ZM1.526,0l17.82,17.75L1.528,35.5A2.545,2.545,0,0,1,0,33.17c0-.034,0-.068,0-.1V2.427c0-.028,0-.062,0-.1A2.542,2.542,0,0,1,1.512.007L1.528,0ZM30.994,15.67a2.468,2.468,0,0,1,1,1.988c0,.033,0,.064,0,.1v0c.006.064.01.139.01.214a2.305,2.305,0,0,1-.941,1.861l-.006,0L26.9,22.186,22.395,17.75,26.9,13.243ZM5.548,34.6,20.8,19.275l4.161,4.161Z" transform="translate(1042 4025.75)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

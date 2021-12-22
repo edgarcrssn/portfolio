@@ -1,0 +1,978 @@
+/* General */
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	list-style-type: none;
+}
+
+body{
+	font-family: poppins, sans-serif;
+	font-weight: 400;
+	font-style: normal; 
+	background-color: #121212;
+	color: #f8f5f2;
+}
+
+a{
+	text-transform: none;
+	text-decoration: none;
+	color: #f8f5f2;
+}
+
+em{
+	color: #e2b9a1;
+}
+
+h2{
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.arrow{
+	text-align: center;
+	margin: auto;
+	width: 20px;
+	height: auto;
+	opacity: 40%;
+	transition: opacity 200ms;
+}
+
+.arrow:hover{
+	opacity: 100%;
+}
+
+
+
+/* Header */
+
+
+
+header{
+	margin: 50px 100px 100px 100px;
+}
+
+#wave-header{
+	margin: -50px -100px 0 -100px;
+	position: absolute;
+	z-index: -2;
+	width: 100%;
+	height: auto;
+}
+
+nav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 70px;
+}
+
+#logo{
+	font-family: poppins, sans-serif;
+	font-weight: 800;
+	font-size: 2em;
+	color: #e2b9a1;
+}
+
+#menu-contact{
+	opacity: 40%;
+	border-bottom: 1px solid #161616;
+	transform: scale(1);
+	transition: opacity 400ms, border-color 300ms, transform 600ms;
+}
+
+#menu-contact:hover{
+	opacity: 100%;
+	border-color: #e2b9a1;
+	transform: scale(1.1);
+}
+
+#slogan-mockup{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-left: 80px;
+}
+
+h1{
+	font-family: poppins, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.1rem;
+	text-align: right;
+	margin: 60px 60px 0 0;
+	cursor: default;
+	width: 600px;
+}
+
+#mockup{
+	width: 35%;
+	height: 35%;
+}
+
+#plane{
+	position: absolute;
+	z-index: -1;
+	width: 200px;
+	height: auto;
+	margin: -175px 0 0 160px;
+	opacity: 30%;
+	transition: 1000ms;
+}
+
+#text-plane:hover + #plane{
+	transform: rotate(45deg);
+}
+
+#txt-download{
+	text-align: left;
+	margin: -50px 0 10px 0;
+}
+
+.download-button{
+	width: 215px;
+	height: auto;
+}
+
+#app-store{
+	margin-right: 10px;
+}
+
+#app-store, #google-store{
+	transform: scale(1);
+	transition: transform 200ms;
+}
+
+#app-store:hover, #google-store:hover{
+	transform: scale(1.05);
+}
+
+
+/* Section envies */
+
+
+
+#container-envies{
+	background-color: #161616;
+	padding: 200px 100px 100px 100px;
+}
+
+#wave-1{
+	position: absolute;
+	margin: -200px -100px -100px -100px;
+	width: 100%;
+	height: auto;
+}
+
+#title-envies{
+	position: absolute;
+	z-index: 1;
+}
+
+#car{
+	position: absolute;
+	z-index: 0;
+	width: 300px;
+	height: auto;
+	opacity: 30%;
+	margin: -120px 0 0 180px;
+	transition: transform 800ms;
+}
+
+#car:hover{
+	transform: rotate(-15deg);
+}
+
+#contenu-envies{
+	margin-top: 250px;
+	text-align: center;
+}
+
+#filtres{
+	width: 50%;
+	height: auto;
+	margin-bottom: 75px;
+}
+
+#deserts{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 150px;
+}
+
+.img-desert{
+	width: 375px;
+	height: auto;
+}
+
+.boxDeserts{
+	transform-style: preserve-3d;
+}
+
+.boxDeserts p{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
+	font-weight: 600;
+	font-size: 1.3em;
+	opacity: 0%;
+	transform: translateZ(0);
+	transition-duration: 500ms;
+}
+
+.boxDeserts:hover p{
+	transform: translateZ(50px);
+	opacity: 100%;
+}
+
+#wave-2{
+	margin: 0 -100px -110px -100px;
+}
+
+
+
+/* Section découvrir */
+
+
+
+#container-decouvrir{
+	margin: 100px;
+}
+
+#montgolfiere{
+	position: absolute;
+	z-index: 1;
+	width: 200px;
+	height: auto;
+	margin: -150px 0 0 1050px;
+	opacity: 20%;
+	transition: transform 800ms;
+}
+
+#montgolfiere:hover{
+	transform: rotate(15deg);
+}
+
+#title-decouvrir{
+	margin-bottom: 100px;
+}
+
+#img-trip{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 150px;
+}
+
+.trip{
+	width: 250px;
+	height: auto;
+	opacity: 80%;
+	transform: scale(1);
+	transition: transform 600ms, opacity 400ms;
+}
+
+.trip:hover{
+	transform: scale(1.1);
+	opacity: 100%;
+}
+
+#wave-3{
+	margin: 0 -100px -110px -100px;
+}
+
+
+
+/* Section partenaires */
+
+
+
+#container-partenaires{
+	background-color: #161616;
+	padding: 100px;
+}
+
+#title-partenaires{
+	margin-bottom: 100px;
+}
+
+#container-logos{
+	height: 400px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 150px;
+}
+
+#container-logos img{
+	width: 500px;
+	height: auto;
+	opacity: 60%;
+	transition: 600ms;
+}
+
+#container-logos img:hover{
+	opacity: 100%;
+	transform: scale(1.05);
+}
+
+#wave-4{
+	margin: 0 -100px -110px -100px;
+}
+
+#arrow-partenaires{
+	margin-bottom: 50px;
+}
+
+
+
+/* Section contact */
+
+
+
+#container-contact{
+	margin: 100px;
+}
+
+#Contact{
+	margin-bottom: 75px;
+}
+
+form{
+	text-align: center;
+}
+
+input, textarea{
+	font-family: poppins, sans-serif;
+	font-weight: 200;
+	font-style: normal; 
+	font-size: 1.5em;
+	color: #f8f5f2;
+	background-color: #121212;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #e2b9a1;
+	padding-bottom: 10px;
+	margin: 10px 0 30px 0;
+	width: 50%;
+	resize: none;
+}
+
+input::placeholder, textarea::placeholder{
+	color: #f8f5f2;
+	opacity: 50%;
+}
+
+button{
+	font-family: poppins, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 32px;
+	color: #f8f5f2;
+	border: 1px solid #e2b9a1;
+	border-radius: 40px;
+	background-color: #121212;
+	padding: 10px 60px;
+	margin: 40px 0 100px 0;
+	cursor: pointer;
+	transform: scale(1);
+	transition: transform 600ms;
+}
+
+button:hover{
+	transform: scale(1.1);
+}
+
+.paper-plane{
+	position: absolute;
+	width: 15%;
+	height: auto;
+	opacity: 30%;
+}
+
+#paper-plane-1{
+	margin-top: 25%;
+	transition: transform 1000ms;
+}
+
+#paper-plane-1:hover{
+	transform: rotate(30deg);
+}
+
+#paper-plane-2{
+	margin-top: 5%;
+	margin-left: 70%;
+	transition: transform 1000ms;
+}
+
+#paper-plane-2:hover{
+	transform: rotate(-30deg);
+}
+
+#wave-footer{
+	margin: 0 -100px -110px -100px;
+}
+
+
+/* Footer */
+
+
+
+footer{
+	padding: 100px;
+	background-color: #e2b9a1;
+}
+
+footer a{
+	opacity: 60%;
+	transition: opacity 400ms;
+}
+
+footer a:hover{
+	opacity: 100%;
+}
+
+#container-footer{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 1.2em;
+	padding: 50px 0;
+}
+
+#blabla{
+	margin-bottom: 20px;
+}
+
+#instagram{
+	width: 200px;
+	height: auto;
+}
+
+#container_signature{
+	margin-top: 80px;
+	margin-bottom: -80px;
+	text-align: center;
+}
+
+#signature{
+	margin: auto;
+	font-size: 0.8em;
+}
+
+#name{
+	font-style: italic;
+}
+
+
+
+
+/* Mobile */
+@media all and (max-width: 1024px){
+
+	.arrow{		
+		width: 40px;	
+		opacity: 100%;
+	}
+
+	h2{
+		font-size: 2.2rem;
+	}
+
+
+
+	/* Header */
+
+
+
+	header{
+		margin: 100px 100px 200px 100px;
+	}
+	
+	#wave-header{
+		margin: -100px -100px 0 -100px;
+	}
+	
+	nav{
+		margin-bottom: 150px;
+	}
+	
+	#logo{
+		font-size: 4rem;
+	}
+	
+	#slogan-mockup{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+	}
+	
+	h1{
+		font-size: 4rem;
+		text-align: center;
+		margin: 0;
+	}
+
+	h2{
+		font-size: 3rem;
+	}
+
+	#menu-contact{
+		opacity: 100%;
+		color: #e2b9a1;
+		font-size: 2rem;
+	}
+	
+	#container-mockup{
+		text-align: center;
+	}
+
+	#mockup{
+		width: 100%;
+		height: auto;
+		margin: 100px 0 100px 0;
+	}
+	
+	#plane{
+		display: none;
+	}
+	
+	#txt-download{
+		display: none;
+	}
+
+	#container-dl{
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.download-button{
+		width: 100%;
+		height: auto;
+		margin-top: 0;
+	}
+	
+	#app-store{
+		margin: 0;
+	}
+
+	#google-store{
+		margin: 0;
+		margin-top: 20px;
+	}
+
+	#app-store:hover, #google-store:hover{
+		transform: unset;
+	}
+
+
+
+	/* Section envies */
+
+
+
+	#container-envies{
+		padding: 200px 100px 200px 100px;
+	}
+
+	#wave-1{
+		margin: -200px -100px 0 -100px;
+	}
+	
+	#title-envies{
+		margin-top: 100px;
+		position: relative;
+	}
+	
+	#car{
+		display: none;
+	}
+	
+	#contenu-envies{
+		margin-top: 100px;
+		text-align: center;
+	}
+	
+	#filtres{
+		width: 100%;
+		height: auto;
+		margin-bottom: 75px;
+	}
+	
+	#deserts{
+		flex-direction: column;
+		justify-content: space-around;
+		margin-bottom: 50px;
+	}
+	
+	.img-desert{
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	
+	.boxDeserts p{
+		display: none;
+	}
+
+	#wave-2{
+		margin: 0 -100px -220px -100px;
+	}
+
+	.boxDeserts{
+		transform-style: unset;
+	}
+	
+	.boxDeserts:hover p{
+		transform: unset;
+	}
+
+
+
+	/* Section découvrir */
+
+
+
+	#container-decouvrir{
+		margin: 200px 100px;
+	}
+
+	#montgolfiere{
+		display: none;
+	}
+
+	#img-trip{
+		flex-direction: column;
+		margin-bottom: 50px;
+	}
+
+	#container-img-trip{
+		text-align: center;
+	}
+
+	.trip{
+		width: 80%;
+		margin-bottom: 20px;
+		opacity: 100%;
+		transition: none;
+	}
+
+	.trip:hover{
+		transform: unset;
+	}
+
+	#wave-3{
+		margin: 0 -100px -220px -100px;
+	}
+
+
+
+	/* Section partenaires */
+
+
+
+	#container-partenaires{
+		padding: 200px 100px;
+	}
+
+	#container-logos{
+		height: auto;
+		flex-direction: column;
+		margin-bottom: 100px;
+	}
+
+	#fram, #promovac{
+		display: none;
+	}
+
+	#container-logos img{
+		opacity: 100%;
+		width: 100%;
+		margin-bottom: 50px;
+		transition: none;
+	}
+
+	#container-logos img:hover{
+		transform: unset;
+	}
+
+	#arrow-partenaires{
+		margin-bottom: 0;
+	}
+
+	#wave-4{
+		margin: 0 -100px -220px -100px;
+	}
+
+
+
+	/* Section contact */
+
+
+
+	#container-contact{
+		margin: 200px 100px;
+	}
+	
+	input, textarea{
+		width: 80%;
+	}
+
+	input{
+		font-size: 50px;
+	}
+	
+	input::placeholder, textarea::placeholder{
+		color: #f8f5f2;
+		opacity: 50%;
+	}
+	
+	.paper-plane{
+		display: none;
+	}
+
+	#wave-footer{
+		margin: 0 -100px -220px -100px;
+	}
+
+	button:hover{
+		transform: unset;
+	}
+
+	button{
+		font-size: 4em;
+		border-radius: 80px;
+		padding: 20px 80px;
+	}
+
+
+
+	/* Footer */
+
+
+	footer{
+		padding: 100px;
+	}
+	
+	footer a{
+		opacity: 100%;
+	}
+	
+	#container-footer{
+		text-align: center;
+		flex-direction: row;
+		font-size: 2.2rem;
+		padding: 50px 0;
+	}
+	
+	#blabla{
+		margin-bottom: 40px;
+	}
+
+	#store{
+		margin-bottom: 40px;
+	}
+
+	#boxFooter{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#instagram{
+		width: 250px;
+		height: auto;
+	}
+	
+	#container_signature{
+		margin-top: 50px;
+		margin-bottom: -50px;
+		text-align: center;
+	}
+	
+	#signature{
+		margin: auto;
+		font-size: 0.6em;
+	}
+}
+
+
+
+
+
+/* Grande résolution */
+@media  screen and (min-width: 1920px){
+
+	/* General */
+	
+
+
+	h2{
+		font-size: 2rem;
+		text-align: center;
+	}
+	
+	.arrow{
+		width: 20px;
+	}
+	
+	
+	
+	/* Header */
+	
+
+	
+	nav{
+		margin-bottom: 80px;
+	}
+	
+	#logo{
+		font-size: 2.4rem;
+	}
+	
+	#menu-contact{
+		font-size: 1.2rem;
+	}
+	
+	#slogan-mockup{
+		margin-left: 200px;
+	}
+	
+	h1{
+		font-size: 2.5rem;
+		margin: 80px 80px 0 0;
+		width: 700px;
+	}
+	
+	#plane{
+		width: 250px;
+		margin: -210px 0 0 160px;
+	}
+	
+	#txt-download{
+		margin: -100px 0 20px 0;
+	}
+	
+	.download-button{
+		width: 240px;
+	}
+	
+	
+	
+	/* Section envies */
+	
+	
+	
+	#filtres{
+		width: 40%;
+		margin-bottom: 100px;
+	}
+	
+	.img-desert{
+		width: 500px;
+	}
+	
+	.boxDeserts p{
+		padding-top: 140px;
+		font-size: 1.5em;
+	}
+	
+	
+	
+	/* Section découvrir */
+	
+	
+	
+	#montgolfiere{
+		width: 200px;
+		margin: -150px 0 0 1450px;
+	}
+	
+	.trip{
+		width: 350px;
+	}
+	
+	
+	
+	/* Section partenaires */
+	
+	
+	
+	#container-logos{
+		height: 600px;
+	}
+	
+	#container-logos img{
+		width: 600px;
+	}
+
+	
+	
+	/* Section contact */
+	
+	
+	
+	#Contact{
+		margin-bottom: 100px;
+	}
+	
+	input, textarea{
+		font-size: 1.7em;
+		width: 40%;
+	}
+	
+	.paper-plane{
+		position: absolute;
+		width: 10%;
+		height: auto;
+		opacity: 30%;
+	}
+	
+	#paper-plane-1{
+		margin-top: 20%;
+		margin-left: 7%;
+	}
+	
+	#paper-plane-2{
+		margin-top: 4%;
+		margin-left: 70%;
+	}
+
+	
+	
+	/* Footer */
+	
+	
+	
+	#container-footer{
+		font-size: 1.6rem;
+		padding: 100px 0;
+	}
+	
+	#instagram{
+		width: 250px;
+	}
+	
+	#signature{
+		font-size: 1rem;
+	}
+}

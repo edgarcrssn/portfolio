@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="311" height="63" viewBox="0 0 311 63">
+  <g id="Groupe_273" data-name="Groupe 273" transform="translate(-1513 -4021)">
+    <rect id="Rectangle_97" data-name="Rectangle 97" width="311" height="63" rx="8" transform="translate(1513 4021)" fill="#a973f5"/>
+    <g id="Groupe_271" data-name="Groupe 271" transform="translate(29)">
+      <text id="App_Store" data-name="App Store" transform="translate(1607 4061)" fill="#fff" font-size="26" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="0" y="0">App Store</tspan></text>
+      <g id="app-store-1" transform="translate(1393.668 3838.352)">
+        <path id="Tracé_99" data-name="Tracé 99" d="M163.427,227.251l.005,0-1.941,3.362a2.566,2.566,0,1,1-4.444-2.566l1.43-2.477.137-.238a2.117,2.117,0,0,1,2.06-.846s2.847.309,3.053,1.789A1.73,1.73,0,0,1,163.427,227.251Zm27.532-8.587h-6.053a.893.893,0,0,1-.663-.26l0-.008-6.48-11.223-.008.006-.389-.557c-.637-.974-1.648,1.517-1.648,1.517-1.208,2.776.171,5.931.652,6.885l9,15.588a2.566,2.566,0,0,0,4.444-2.566l-2.251-3.9c-.044-.094-.12-.351.342-.352h3.058a2.566,2.566,0,0,0,0-5.132ZM179.2,222.152s.323,1.644-.927,1.644H155.9a2.566,2.566,0,0,1,0-5.132h5.753c.929-.054,1.149-.59,1.149-.59l.005,0,7.509-13.007h0a.573.573,0,0,0,0-.526l-2.48-4.3a2.566,2.566,0,0,1,4.444-2.566l1.15,1.992,1.148-1.989a2.566,2.566,0,0,1,4.444,2.566l-10.45,18.1c-.046.11-.06.283.28.314H175.1v.061S178.71,218.781,179.2,222.152Z" transform="translate(0 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

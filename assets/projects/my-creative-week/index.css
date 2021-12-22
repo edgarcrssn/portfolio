@@ -1,0 +1,1296 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+
+/* === Reset CSS === */
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    list-style-type: none;
+
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--dark-blue);
+}
+
+/* === Variables === */
+
+/* Couleurs */
+
+:root{
+    --main-red: #A64B52;
+    --dark-blue: #0F202D;
+    --text-grey: #707070;
+    --background: #FFFFFF;
+}
+
+/* Fonts */
+
+:root{
+    --logo-weight: 700; 
+    --title-weight: 600;
+    --text-weight: 400;
+
+    --logo-size: 25px;
+    --title-size: 42px;
+    --text-size: 23px
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--background);
+    overflow-x: hidden;
+}
+
+p{
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+    color: var(--text-grey);
+    text-align: justify;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+h2{
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+}
+
+.cta-resto{
+    padding: 13px;
+}
+
+.cta-reserver{
+    padding: 13px 40px;
+}
+
+.cta-reserver, .cta-resto{
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);  
+    background: var(--main-red);
+    color: white;
+    border-radius: 12px;
+}
+
+.cta-box, #logos img,input[type="submit"]{
+    transform: scale(1);
+    transition: 300ms;
+}
+
+.cta-box:hover, #logos img:hover,input[type="submit"]:hover{
+    transform: scale(1.05);
+}
+
+li a{
+    transition: 300ms;
+}
+
+li a:hover{
+    color: var(--main-red);
+}
+
+#logo-view, #logo-download{
+    transform: rotate(0deg);
+	transition: 400ms;
+}
+
+#link-view:hover #logo-view, #link-download:hover #logo-download{
+    transform: rotate(360deg);
+}
+
+/* === Nav bar === */
+
+header{
+    position: fixed;
+}
+
+header.desktop{
+    display: flex;
+    background: var(--background);
+    z-index: 10;
+
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
+}
+
+header.desktop nav.desktop{
+    display: flex;
+    flex-direction: row;
+    padding-left: 310px;
+    color: var(--dark-blue);
+}
+
+header.desktop .logo{
+    font-weight: var(--logo-weight);
+    font-size: var(--logo-size);
+    padding-left: 170px;
+}
+
+header.desktop nav.desktop .nav-text{
+    width: 895px;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+}
+
+header.desktop nav.desktop .nav-social{
+    padding-left: 130px;
+    width: 74px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header.desktop nav.desktop .nav-social img{
+    height: 23px;
+}
+
+header.desktop nav.desktop li{
+    list-style: none;
+    display: inline;
+}
+
+header.mobile{
+    display: none;
+}
+
+/* === Section 1 === */
+
+#first-section{
+    padding-top: 90px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#first-section .big-title-box{
+    margin-left: 200px;
+}
+
+#first-section p, h1{
+    margin-bottom: 36px;
+}
+
+#first-section h1{
+    font-size: 52px;
+    font-weight: var(--title-weight);
+}
+
+#first-section .cta-section{
+    width: 360px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#first-section #assiette-bg-1{
+    position: absolute;
+
+    top: 110px;
+    left: -190px;
+
+    opacity: 5%;
+    z-index: -10;
+}
+
+/* === Section 2/3 === */
+
+#second-section,
+#third-section{
+    padding-top: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#second-section{
+    margin-left: 100px;
+    flex-direction: row;
+}
+
+#third-section{
+    margin-right: 100px;
+    flex-direction: row-reverse;
+}
+
+#second-section .content, #third-section .content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#second-section .content{
+    width: 540px;
+    margin-right: 200px;
+}
+
+#third-section .content{
+    width: 540px;
+    margin-left: 200px;
+}
+
+#second-section h2,
+#third-section h2,
+#second-section p,
+#third-section p{
+    margin-bottom: 50px;
+    line-height: 28px;
+}
+
+#second-section #assiette-bg-2{
+    position: absolute;
+    width: 900px;
+
+    right: -100px;
+    top: 500px;
+
+    opacity: 5%;
+    z-index: -10;
+}
+
+#third-section #assiette-bg-3{
+    position: absolute;
+
+    left: -600px;
+    top: 2000px;
+
+    opacity: 5%;
+    z-index: -10;
+}
+
+/* === Section 4 === */
+
+#fourth-section{
+    padding-top: 160px;
+}
+
+#fourth-section h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#card{
+    width: 1600px;
+    height: 450px;
+    border-radius: 12px;
+
+    background: var(--dark-blue);
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#card *{
+    color: white;
+}
+
+#card img{
+    width: 34px;
+    height: 34px;
+}
+
+#card-left{
+    background: url(img/plat-card.png) no-repeat;
+    width: 50%;
+
+    border-radius: 12px;
+}
+
+#card-left #content-bis{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#card-left .content{
+    margin-top: 175px;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#card-left a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#view a{
+    width: 275px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#download a{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content-right, #content-right p{
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-right{
+    margin: auto;
+}
+
+#address{
+    line-height: 55px;
+}
+
+#message-logos{
+    margin: 50px 0 40px 0;
+}
+
+#logos{
+    width: 180px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* === Section 5 === */
+
+#fifth-section{
+    padding-top: 160px;
+}
+
+#fifth-section h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-background{
+    background: #FAFAFF;
+    height: 592px;
+}
+
+#flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 100px;
+    padding-top: 80px;
+}
+
+#horaires div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+#horaires img{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+#horaires h3{
+    font-weight: var(--title-weight);
+    font-size: 30px;
+}
+
+#horaires p{
+    color: var(--dark-blue);
+    font-weight: var(--text-weight);
+}
+
+form{
+    width: 600px;
+    height: 435px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input, textarea{
+    font-size: var(--text-size);
+    background: #F5F6F8;
+    border-radius: 12px;
+    padding: 13px 30px;
+    resize: none;
+}
+
+#mailtel{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input[type="submit"]{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip:padding-box;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    -ms-border-radius:0;
+    -o-border-radius:0;
+    -webkit-appearance:none;
+    outline: none;
+    cursor: pointer;
+    background: var(--main-red);
+    width: 160px;
+    color: white;
+    border-radius: 12px;
+}
+
+#button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.moyen{
+    display: none;
+}
+
+/* === Section 6 === */
+
+#sixth-section{
+    padding-top: 160px;
+}
+
+/* === Footer === */
+
+footer{
+    margin: 160px 180px;
+    font-weight: var(--text-weight);
+    font-size: var(--text-size);
+    line-height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer h3{
+    font-weight: var(--title-weight);
+}
+
+footer li img{
+    height: 23px;
+    width: 23px;
+}
+
+#insta-footer{
+    margin-right: 30px;
+}
+
+#mentions-legales{
+    display: flex;
+    justify-content: center;
+    
+
+    margin-bottom: 20px;
+}
+
+#mentions-legales div{
+    width: 350px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mentions-legales div *{
+    color: var(--dark-blue);
+    font-size: 0.8em;
+}
+
+
+/* Ecrans moyens (Macbook 13'...) */
+@media all and (max-width: 1725px) and (min-width: 1200px){
+    /* === Variables === */
+
+    /* Fonts */
+
+    :root{
+        --logo-size: 20px;
+        --title-size: 32px;
+        --text-size: 17px
+    }
+
+    .cta-resto{
+        padding: 11px;
+    }
+
+    .cta-reserver{
+        padding: 11px 38px;
+    }
+
+    .cta-reserver, .cta-resto{
+        border-radius: 10px;
+    }
+
+    /* === Nav bar === */
+
+
+    header.desktop{  
+        height: 75px;
+    }
+
+    header.desktop nav.desktop{
+        padding-left: 220px;
+    }
+
+    header.desktop .logo{
+        padding-left: 130px;
+    }
+
+    header.desktop nav.desktop .nav-text{
+        width: 680px;
+    }
+
+    header.desktop nav.desktop .nav-social{
+        padding-left: 90px;
+        width: 55px;
+    }
+
+    header.desktop nav.desktop .nav-social img{
+        height: 17px;
+    }
+
+    /* === Section 1 === */
+
+    #first-section{
+        padding-top: 75px;
+        justify-content: space-between;
+    }
+
+    #first-section .big-title-box{
+        margin-left: 130px;
+    }
+
+    #first-section p, h1{
+        margin-bottom: 30px;
+    }
+
+    #first-section h1{
+        font-size: 46px;
+        line-height: 55px;
+    }
+
+    #first-section .cta-section{
+        width: 290px;
+    }
+
+    #first-section img{
+        width: 740px;
+    }
+
+    #first-section #assiette-bg-1{
+        height: 100%;
+        left: -50px;
+    }
+
+    /* === Section 2/3 === */
+
+    #second-section #plat-2-box img{
+        width: 80%;
+        height: 80%;
+    }
+
+    #third-section #plat-3-box img{
+        width: 675px;
+    }
+
+    #second-section,
+    #third-section{
+        padding-top: 130px;
+    }
+
+    #second-section{
+        margin-left: 80px;
+    }
+
+    #third-section{
+        margin-right: 80px;
+    }
+
+    #second-section .content{
+        width: 430px;
+        margin-right: 160px;
+    }
+
+    #third-section .content{
+        width: 430px;
+        margin-left: 160px;
+    }
+
+    #second-section h2,
+    #third-section h2,
+    #second-section p,
+    #third-section p{
+        margin-bottom: 40px;
+        line-height: 24px;
+    }
+
+    #second-section #assiette-bg-2{
+        width: 600px;
+    
+        right: 0;
+        top: 500px;
+    }
+
+    #third-section #assiette-bg-3{
+        width: 1200px;
+        left: -500px;
+        top: 1600px;
+    }
+
+    /* === Section 4 === */
+
+    #fourth-section{
+        padding-top: 130px;
+    }
+
+    #fourth-section h2{
+        margin-bottom: 40px;
+    }
+
+    #card{
+        width: 1200px;
+        height: 360px;
+        border-radius: 10px;
+    }
+
+    #card img{
+        width: 27px;
+        height: 27px;
+    }
+
+    #card-left{
+        border-radius: 10px;
+    }
+
+    #card-left .content{
+        margin-top: 140px;
+        height: 84px;
+    }
+
+    #view a{
+        width: 210px;
+    }
+
+    #download a{
+        width: 380px;
+    }
+
+    #address{
+        line-height: 44px;
+    }
+
+    #message-logos{
+        margin: 40px 0 32px 0;
+    }
+
+    #logos{
+        width: 144px;
+    }
+
+    /* === Section 5 === */
+
+    #fifth-section{
+        padding-top: 130px;
+    }
+
+    #fifth-section h2{
+        margin-bottom: 40px;
+    }
+
+    .contact-background{
+        height: 475px;
+    }
+
+    #flex{
+        margin: 0 80px;
+        padding-top: 64px;
+    }
+
+    #horaires div{
+        margin-bottom: 24px;
+    }
+
+    #horaires img{
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+    }
+
+    #horaires h3{
+        font-size: 24px;
+    }
+
+    #horaires p{
+        line-height: 25px;
+    }
+
+    form{
+        width: 400px;
+        height: 350px;
+    }
+
+
+    input, textarea{
+        border-radius: 10px;
+        padding: 10px 24px;
+    }
+
+    #mailtel{
+        width: 400px;
+    }
+
+    input[type="email"], input[type="tel"]{
+        width: 35%;
+    }
+
+    input[type="submit"]{
+        width: 130px;
+    }
+
+    /* === Footer === */
+
+    footer{
+        margin: 130px 150px;
+        line-height: 24px;
+    }
+
+    footer img{
+        height: 17px;
+        width: 17px;
+    }
+
+    #insta-footer{
+        margin-right: 24px;
+    }
+}
+
+/* Mobiles */
+@media all and (max-width: 1200px){
+
+    /* === Variables === */
+
+    /* Fonts */
+
+    :root{
+        --logo-size: 20px;
+        --title-size: 26px;
+        --text-size: 16px
+    }
+
+    .cta-section{
+        width: 40px;
+    }
+    
+    .cta-resto{
+        padding: 9px;
+    }
+    
+    .cta-reserver{
+        padding: 9px 24px;
+    }
+    
+    .cta-reserver, .cta-resto{
+        border-radius: 12px;
+    }
+
+    /* === Nav bar === */
+
+    header.desktop{
+        display: none;
+    }
+
+    header.mobile{
+        display: flex;
+        align-items: center;
+
+        position: fixed;
+        z-index: 10;
+
+        background: white;
+        width: 100%;
+        height: 10%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
+    }
+
+    header.mobile .logo{
+        font-size: var(--logo-size);
+        font-weight: var(--title-weight);
+    }
+    
+    header.mobile #menuToggle{
+        display: block;
+        position: relative;
+        
+        z-index: 1;
+        
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    header.mobile nav.mobile{
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header.mobile #menuToggle a{
+        text-decoration: none;
+        color: var(--dark-blue);
+        transition: color 300ms ease;
+    }
+    
+    header.mobile #menuToggle a:hover{
+        color: var(--main-red);
+    }
+    
+    header.mobile #menuToggle input{
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        
+        cursor: pointer;
+        
+        opacity: 0;
+        z-index: 2;
+        
+        -webkit-touch-callout: none;
+    }
+    
+    header.mobile #menuToggle span{
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        
+        background: var(--dark-blue);
+        border-radius: 3px;
+        
+        z-index: 1;
+        
+        transform-origin: 4px 0px;
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+    
+    header.mobile #menuToggle span:first-child{
+        transform-origin: 0% 0%;
+    }
+    
+    header.mobile #menuToggle span:nth-last-child(2){
+        transform-origin: 0% 100%;
+    }
+    
+    header.mobile #menuToggle input:checked ~ span{
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: var(--dark-blue);
+    }
+    
+    header.mobile #menuToggle input:checked ~ span:nth-last-child(3){
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    
+    header.mobile #menuToggle input:checked ~ span:nth-last-child(2){
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+    
+    header.mobile #menu{
+        position: absolute;
+        width: 160px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
+        border-radius: 0 0 12px 12px;
+        
+        
+        background: white;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    header.mobile #menu div{
+        width: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header.mobile #menu img{
+        width: 17px;
+        height: 17px;
+    }
+    
+    header.mobile #menu li{
+        padding: 10px 0;
+        font-size: 22px;
+    }
+    
+     header.mobile #menuToggle input:checked ~ ul{
+        transform: none;
+    }
+
+    /* === Section 1 === */
+
+    #first-section .plat-1-box img{
+        display: none;
+    }
+
+    #first-section{
+        padding-top: 200px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #first-section .big-title-box, #first-section .big-title-box section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #first-section .big-title-box{
+        text-align: center;
+        height: 165px;
+        margin-left: 0;
+        margin: auto;
+    }
+
+    #first-section p, h1{
+        margin-bottom: 18px;
+    }
+
+    #first-section h1{
+        line-height: 40px;
+        font-size: 32px;
+    }
+
+    #first-section .cta-section{
+        width: 250px;
+    }
+
+    #first-section #assiette-bg-1{
+        width: 500px;
+        top: 100px;
+        left: -175px;
+    }
+
+    /* === Section 2/3 === */
+
+    #second-section #plat-2-box img,
+    #third-section #plat-3-box img{
+        width: 300px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    #second-section,
+    #third-section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    #second-section{
+        margin-left: 0;
+        padding-top: 170px;
+    }
+
+    #third-section{
+        margin-right: 0;
+        padding-top: 100px;
+    }
+
+    #second-section .content, #third-section .content{
+        width: 300px;
+        margin-right: 0;
+        margin-left: 0px;
+    }
+
+    #second-section h2,
+    #third-section h2,
+    #second-section p,
+    #third-section p{
+        margin-bottom: 30px;
+        line-height: 24px;
+    }
+
+    #second-section h2,
+    #third-section h2{
+        text-align: center;
+    }
+
+    #second-section #assiette-bg-2{
+        display: none;
+    }
+
+    #third-section #assiette-bg-3{
+        width: 850px;
+        left: -500px;
+        top: 1900px;
+    }
+
+    /* === Section 4 === */
+
+    #fourth-section{
+        padding-top: 100px;
+    }
+
+    #fourth-section h2{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #card{
+        width: 310px;
+        height: 600px;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #card img{
+        width: 34px;
+        height: 34px;
+    }
+
+    #card-left{
+        background: url(img/plat-card.png) no-repeat;
+        width: 100%;
+        height: 300px;
+
+        border-radius: 10px;
+    }
+
+    #card-left #content-bis{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+    }
+
+    #card-left .content{
+        margin-top: 0;
+        height: 100px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #card-left a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+    }
+
+    #card-left img{
+        margin-right: 10px;
+        height: 29px;
+    }
+
+    #view a{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #download a{
+        display: flex;
+        justify-content: space-start;
+    }
+
+    #content-right{
+        margin: auto;
+        height: 300px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #content-right p{
+        text-align: center;
+    }
+
+    #address{
+        font-size: 0.9em;
+        line-height: 35px;
+    }
+
+    #message-logos{
+        margin: 30px 0 20px 0;
+    }
+
+    #logos{
+        width: 50%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* === Section 5 === */
+
+    #fifth-section{
+        padding-top: 100px;
+    }
+
+    #fifth-section h2{
+        margin-bottom: 30px;
+    }
+
+    .contact-background{
+        height: auto;
+    }
+
+    #flex{  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 30px;
+        padding: 50px 0;
+    }
+
+    #horaires{
+        margin-bottom: 40px;
+        margin-left: -30px;
+    }
+
+    #horaires img{
+        height: 18px;
+        width: 18px;
+        margin-right: 8px;
+    }
+
+    #horaires h3{
+        font-size: 20px;
+    }
+
+    #horaires p{
+        line-height: 25px;
+    }
+
+    form{
+        width: 300px;
+        height: 350px;
+        margin-bottom: 40px;
+    }
+
+    input, textarea{
+        border-radius: 8px;
+    }
+
+    #mailtel{
+        width: 300px;
+    }
+
+    input[type="email"], input[type="tel"]{
+        width: 27%;
+    }
+
+    /*input[type="submit"]{
+        ;
+    }*/
+
+    #map{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    /* === Section 6 === */
+
+    #sixth-section{
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    /* === Footer === */
+
+    footer{
+        text-align: center;
+        margin: 100px 50px;
+        line-height: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    footer .margin{
+        margin-bottom: 50px;
+    }
+
+    footer h3{
+        font-weight: var(--title-weight);
+    }
+
+    footer li img{
+        height: 18px;
+        width: 18px;
+    }
+
+    #insta-footer{
+        margin-right: 20px;
+    }
+
+    #mentions-legales div{
+        width: 300px;
+    }
+}

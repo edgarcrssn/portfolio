@@ -1,0 +1,62 @@
+section#presentation-competences{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    article{
+        padding: $little-margin $big-margin;
+
+        &#presentation{
+            background-color: $main-color;
+            padding-right: $little-margin;
+
+            p{
+
+                a, em{
+                    font-weight: 500;
+                }
+            }
+        }
+        &#competences{
+            height: 100%;
+            padding-left: $little-margin;
+
+            .content{
+
+                .icons-container{
+                    margin: 2em 0 3em;
+                }
+
+                .cta-portfolio{
+                    border-top: 1px solid rgba($main-color, .2);
+                    padding-top: 1.5em;
+
+                    p{
+                        margin-bottom: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 800px){
+
+    section#presentation-competences{
+        display: block;
+
+        article{
+
+            &#presentation{
+                padding: $big-margin;
+            }
+            &#competences{
+                padding: $big-margin;
+                margin-top: $big-margin;
+
+                .cta-portfolio{
+                    margin-bottom: 1em;
+                }
+            }
+        } 
+    }
+}

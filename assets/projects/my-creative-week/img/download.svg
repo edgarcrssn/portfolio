@@ -1,0 +1,10 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="download">
+    <rect id="Rectangle_174" data-name="Rectangle 174" width="34" height="34" fill="#fff" opacity="0"/>
+    <rect id="Rectangle_175" data-name="Rectangle 175" width="22" height="2" rx="1" transform="translate(6 26)" fill="#fff"/>
+    <rect id="Rectangle_176" data-name="Rectangle 176" width="5" height="3" rx="1" transform="translate(6 28) rotate(-90)" fill="#fff"/>
+    <rect id="Rectangle_177" data-name="Rectangle 177" width="5" height="2" rx="1" transform="translate(26 28) rotate(-90)" fill="#fff"/>
+    <path id="Tracé_487" data-name="Tracé 487" d="M14.084,17.083a1.417,1.417,0,0,1-.822-.255L7.6,12.833a1.417,1.417,0,1,1,1.643-2.309l4.845,3.386L18.9,10.283a1.417,1.417,0,1,1,1.7,2.267L14.934,16.8A1.417,1.417,0,0,1,14.084,17.083Z" transform="translate(2.916 4.167)" fill="#fff"/>
+    <path id="Tracé_488" data-name="Tracé 488" d="M12.417,17.167A1.417,1.417,0,0,1,11,15.75V4.417a1.417,1.417,0,1,1,2.833,0V15.75A1.417,1.417,0,0,1,12.417,17.167Z" transform="translate(4.583 1.25)" fill="#fff"/>
+  </g>
+</svg>

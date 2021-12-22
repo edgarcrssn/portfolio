@@ -1,0 +1,106 @@
+footer{
+    width: 100vw;
+    min-height: 33vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    bottom: 0;
+
+    div.footer-info{
+        width: 100%;
+        margin: 0 $big-margin * 2.5;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        ul{
+
+            h4{
+                margin-bottom: 1em;
+            }
+            li{
+                line-height: 2.5em;
+
+                a{
+                    font-weight: 300;
+                    opacity: .6;
+                    transition: .2s;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.plan{
+                
+                > div{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 2em;
+                }
+            }
+            // &.social-networks{
+
+            //     a{
+
+            //         &::before{
+            //             font-family: 'Font Awesome 5 Free';
+            //             font-weight: 900;
+            //             margin-right: .75em;
+            //         }
+
+            //         &.linkedin{
+
+            //             &::before{
+            //                 content: '\f0e1';
+            //             }
+            //         }
+            //         &.github{
+
+            //             &::before{
+            //                 content: '\f09b';
+            //             }
+            //         }
+            //     }
+            // }
+        }
+    }
+
+    .copyrights{
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        bottom: .75em;
+
+        font-weight: 300;
+        opacity: .6;
+    }
+}
+
+@media all and (max-width: 800px){
+    footer{
+        div.footer-info{
+            margin: $big-margin;
+            display: block;
+
+            ul{
+                text-align: center;
+                margin-bottom: $big-margin;
+
+                &.plan{
+                
+                    > div{
+                        display: block
+                    }
+                }
+            }
+        }
+    }
+}
